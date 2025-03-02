@@ -1,8 +1,7 @@
-# Atl-Big-Data-Boris-Kovachev-I1
 # 📊 Projet Data Lake : Analyse des Ventes de Jeux Vidéo
 
 ## 1️⃣ Introduction
-Nous avons construit un **Data Lake** pour analyser les ventes de jeux vidéo à partir de données publiques.
+Ce **Data Lake** a pour but d'analyser les ventes de jeux vidéo à partir de données publiques.
 
 ## 2️⃣ Architecture du Data Lake
 - **Stockage** : MinIO (équivalent S3)
