@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9090:9090"
+    environment:
+      MINIO_ROOT_USER: epsi
+      MINIO_ROOT_PASSWORD: epsi2024@
+    volumes:
+      - ./data:/data
+    command: server /data --console-address ":9090"
+
+  jupyter:
+    image: jupyter/datascience-notebook
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=admin
