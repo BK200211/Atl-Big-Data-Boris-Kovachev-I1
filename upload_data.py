@@ -9,13 +9,13 @@ minio_client = boto3.client(
 
 bucket_name = "data-lake"
 
-# Créer un bucket (s'il n'existe pas)
+# Création du bucket
 try:
     minio_client.create_bucket(Bucket=bucket_name)
 except:
     pass
 
-# Envoyer le fichier CSV
+# Envoie CSV
 with open("vgsales.csv", "rb") as data:
     minio_client.put_object(Bucket=bucket_name, Key="raw/vgsales.csv", Body=data)
 
