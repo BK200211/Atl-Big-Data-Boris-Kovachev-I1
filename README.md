@@ -24,6 +24,7 @@ Ce **Data Lake** analyse les ventes de jeux vidéo à partir de données publiqu
 ### 🔹 Pour lancer le docker
 ```bash
 docker-compose up -d
+```
 
 ## 6️⃣ Pipeline pour effectuer mise à jour
 ### 🔹 Pour lancer la mise à jour
